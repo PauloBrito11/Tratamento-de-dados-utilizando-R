@@ -13,7 +13,7 @@ A primeira coisa que devemos notar é que dados devem seguir alguns parâmetros 
 
 Todas esses possíveis problemas podem ser problemáticos caso a base de dados não sofra nenhum tratamento antes de ser exposta a um modelo ou a uma análise de dados, visto que todos esses fatores podem gerar distorções no resultado final.
 
-## Iniciando o processo
+## Explorando os dados e estabelecendo parâmetros
 
 A primeira coisa que devemos fazer é explorar o conjunto de dados e verificar se os dados estão em conformidade com os princípios listados anteriormente e com a regra de negócio da empresa. 
 Existem algumas funções que podem nos auxiliar nesse processos, são elas: 
@@ -41,4 +41,7 @@ Logo de cara percebemos alguns problemas:
 - A coluna de "gêneros" está com problemas de consistência, usando diversas nomeclaturas para uma mesma coisa ("F", "Feminino", "M", "Masculino")
 - Algumas colunas estão com valores "NA's"
 
-Agora que notamos os erros presentes no conjunto de dados, devemos nos atentar a regra de negócio da empresa, vamos fazer a seguinte suposição: **a empresa trabalha apenas na região sudeste. Com isso em mente, surge um outro problema, se a empresa trabalha apenas na região sudeste, por quê existem dados de outras regiões? Também precisaremos corrigir os dados da coluna "Estados".**
+Agora que notamos os erros presentes no conjunto de dados, devemos nos atentar a regra de negócio da empresa, vamos fazer a seguinte suposição: **a empresa trabalha apenas na região sudeste. Com isso em mente, surge um outro problema, se a empresa trabalha apenas na região sudeste, por quê existem dados de outras regiões? Também precisaremos corrigir os dados da coluna "Estados".** Levando em consideração todos esses fatores, podemos finalmente começar a executar mudanças no conjunto de dados, visando a mínima distorção nas informações, bem como a preservação das mesmas.
+
+### Iniciando o processo de tratamento de dados
+
