@@ -71,6 +71,15 @@ Para resolvermos o problema acima, igualaremos todas os dados em um padrão, sen
 
 Ou seja, apenas tornaremos os dados consistentes, condensando todos em duas definições.
 
+Removendo os dados: 
+
+```r
+dados[dados$Gênero == "M",] = "Masculino"
+dados[dados$Gênero == "F",] = "Feminino"
+```
+
+Criando o gráfico
+
 ```r
 x = table(dados$Gênero)
 cores = c("pink", "blue")
