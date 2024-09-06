@@ -15,7 +15,7 @@ Todas esses possíveis problemas podem ser problemáticos caso a base de dados n
 
 ## Explorando os dados e estabelecendo parâmetros
 
-A primeira coisa que devemos fazer é explorar o conjunto de dados e verificar se os dados estão em conformidade com os princípios listados anteriormente e com a regra de negócio da empresa. 
+Primeiramente, vamos explorar o conjunto de dados e verificar se os dados estão em conformidade com os princípios listados anteriormente e com a regra de negócio da empresa. 
 Existem algumas funções que podem nos auxiliar nesse processos, são elas: 
 
 - Head()
