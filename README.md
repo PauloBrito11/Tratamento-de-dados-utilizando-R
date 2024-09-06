@@ -76,6 +76,7 @@ Removendo os dados:
 ```r
 dados[dados$Gênero == "M",] = "Masculino"
 dados[dados$Gênero == "F",] = "Feminino"
+dados$Gênero = factor(dados$Gênero) # Removendo os níveis sem dados que sobraram após o processo
 ```
 
 Criando o gráfico
@@ -93,3 +94,18 @@ Resultado:
 Agora que tornamos os dados da coluna "$Gênero" condensados em apenas duas possibilidades, não há mais problemas nessa coluna.
 
 ## Continuidade do processo de tratamento de dados - Coluna "idade"
+
+A coluna idade possui alguns problemas também, podemos visualizá-los claramente utilizando um gráfico:
+
+Criando gráfico:
+
+```r
+mediana = median(dados$Idade, na.rm = T)
+y = table(dados$Idade)
+plot(y, type = "l", xlab = "idade", lty = 1)
+abline(v = mediana, col = "red", lwd = 2, lty = 2)  # Linha horizontal na mediana
+```
+
+![Gráfico 3](https://github.com/user-attachments/assets/5b517011-36ed-4e27-aebe-99428a7f3ac7)
+
+Em uma percepção inicial, o gráfico não está agradável aos olhos, mas corrigiremos isso em breve, isso ocorre devido a distorção dos dados, repare, a idade máxima é 140 e a mínima é negativa, condições que não condizem com a realidade. Podemos corrigir isso da seguinte forma:
