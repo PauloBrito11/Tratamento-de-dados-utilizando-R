@@ -11,7 +11,7 @@ A primeira coisa que devemos notar é que dados devem seguir alguns parâmetros 
 - Conformidade
 - Integridade
 
-Todas esses possíveis problemas podem ser problemáticos caso a base de dados não sofra nenhum tratamento antes de ser exposta a um modelo ou a uma análise de dados, visto que todos esses fatores podem gerar distorções no resultado final.
+Todas esses possíveis problemas podem ser danosos caso a base de dados não sofra nenhum tratamento antes de ser exposta a um modelo ou a uma análise de dados, visto que todos esses fatores podem gerar distorções no resultado final.
 
 ## Explorando os dados e estabelecendo parâmetros
 
