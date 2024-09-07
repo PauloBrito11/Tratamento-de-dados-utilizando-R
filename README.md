@@ -110,7 +110,7 @@ abline(v = mediana, col = "red", lwd = 2, lty = 2)  # Linha horizontal na median
 
 Em uma percepção inicial, o gráfico não está agradável aos olhos, mas corrigiremos isso em breve, isso ocorre devido a distorção dos dados, repare, a idade máxima é 140 e a mínima é negativa, condições que não condizem com a realidade. Podemos corrigir isso da seguinte forma:
 
-##Tratamento de dados - manipulando os valores "NA's"
+## Tratamento de dados - manipulando os valores "NA's"
 
 A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 
