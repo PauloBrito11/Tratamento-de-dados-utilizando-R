@@ -117,7 +117,7 @@ dados$Idade[dados_na] = median(dados$Idade, na.rm = T)
 
 Com isso, alteramos as idades que são maiores que 110 ou menores que zero, atribuindo a mediana da coluna "$Idade" para os valores que atendem esse requisito citado. Sendo assim, ao chamarmos a função que cria o gráfico novamente, veremos algumas alterações interessantes:
 
-![Grafico 4](https://github.com/user-attachments/assets/2d3212b9-b8d7-40de-9374-d056356bddfc)
+![Screenshot_1](https://github.com/user-attachments/assets/109f5b51-54f1-4da2-831c-f9818a440385)
 
 ## Tratamento de dados - manipulando os valores "NA's"
 
@@ -127,4 +127,3 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 - Dados quantitativos: alteramos os valores "NA's" para a mediana
 
 Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
-
