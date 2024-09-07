@@ -103,7 +103,7 @@ Criando gráfico:
 mediana = median(dados$Idade, na.rm = T)
 y = table(dados$Idade)
 plot(y, type = "l", xlab = "idade", lty = 1)
-abline(v = mediana, col = "red", lwd = 2, lty = 2)  # Linha horizontal na mediana
+abline(v = mediana, col = "red", lwd = 2, lty = 2)  #Linha vertical (mediana)
 ```
 
 ![Gráfico 3](https://github.com/user-attachments/assets/5b517011-36ed-4e27-aebe-99428a7f3ac7)
@@ -119,13 +119,25 @@ Com isso, alteramos as idades que são maiores que 110 ou menores que zero, atri
 
 ![Screenshot_1](https://github.com/user-attachments/assets/109f5b51-54f1-4da2-831c-f9818a440385)
 
+Conferindo os dados: 
+
 ```r
 summary(dados$idade)
 ```
 
-![Screenshot_2](https://github.com/user-attachments/assets/d677bacb-5e84-4f1b-8b57-a418c294f9a6)
+![image](https://github.com/user-attachments/assets/95887b8e-a5cc-4de2-b89a-30a013c4af4d)
 
-Não há mais idades que ultrapassam com uma margem enorme a expectativa de vida e também não há idades negativas, ou seja, não existem mais "outliers" que possam afetar a interpretação final dos dados, com isso, o tratamento de dados da coluna "Idade" está finalizado. 
+Não há mais idades que ultrapassam com uma margem enorme a expectativa de vida e também não há idades negativas, ou seja, não existem mais "outliers". Porém, ainda existem dois valores nulos, para resolvermos isso, simplesmente vamos alterá-los para a mediana, como feito anteriormente com as idades consideradas outliers:
+
+```r
+dados[!complete.cases(dados$Idade),] = median(dados$Idade, na.rm = T)
+```
+
+Conferindo os dados:
+
+![image](https://github.com/user-attachments/assets/b86f0791-89f2-4f7b-b075-eb781ec5aadb)
+
+Não há mais valores que possam gerer algum tipo de distorção, portanto, o tratamento de dados da coluna "idade" está finalizado.
 
 ## Tratamento de dados - manipulando os valores "NA's"
 
@@ -134,5 +146,5 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 - Dados categóricos: alteramos os valores "NA's" para a moda 
 - Dados quantitativos: alteramos os valores "NA's" para a mediana
 
-Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de d
+Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de d
 ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
