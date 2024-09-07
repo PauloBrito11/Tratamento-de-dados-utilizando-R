@@ -119,6 +119,14 @@ Com isso, alteramos as idades que são maiores que 110 ou menores que zero, atri
 
 ![Screenshot_1](https://github.com/user-attachments/assets/109f5b51-54f1-4da2-831c-f9818a440385)
 
+```r
+summary(dados$idade)
+```
+
+![Screenshot_2](https://github.com/user-attachments/assets/d677bacb-5e84-4f1b-8b57-a418c294f9a6)
+
+Não há mais idades que ultrapassam com uma margem enorme a expectativa de vida e também não há idades negativas, ou seja, não existem mais "outliers" que possam afetar a interpretação final dos dados, com isso, o tratamento de dados da coluna "Idade" está finalizado. 
+
 ## Tratamento de dados - manipulando os valores "NA's"
 
 A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
@@ -126,4 +134,5 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 - Dados categóricos: alteramos os valores "NA's" para a moda 
 - Dados quantitativos: alteramos os valores "NA's" para a mediana
 
-Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
+Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de d
+ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
