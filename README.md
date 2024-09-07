@@ -110,6 +110,15 @@ abline(v = mediana, col = "red", lwd = 2, lty = 2)  # Linha horizontal na median
 
 Em uma percepção inicial, o gráfico não está agradável aos olhos, mas corrigiremos isso em breve, isso ocorre devido a distorção dos dados, repare, a idade máxima é 140 e a mínima é negativa, condições que não condizem com a realidade. Podemos corrigir isso da seguinte forma:
 
+```r
+dados_na = dados$Idade > 110 | dados$Idade < 0
+dados$Idade[dados_na] = median(dados$Idade, na.rm = T)
+```
+
+Com isso, alteramos as idades que são maiores que 110 ou menores que zero, atribuindo a mediana da coluna "$Idade" para os valores que atendem esse requisito citado. Sendo assim, ao chamarmos a função que cria o gráfico novamente, veremos algumas alterações interessantes:
+
+![Grafico 4](https://github.com/user-attachments/assets/2d3212b9-b8d7-40de-9374-d056356bddfc)
+
 ## Tratamento de dados - manipulando os valores "NA's"
 
 A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
@@ -118,3 +127,4 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 - Dados quantitativos: alteramos os valores "NA's" para a mediana
 
 Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
+
