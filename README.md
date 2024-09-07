@@ -109,3 +109,12 @@ abline(v = mediana, col = "red", lwd = 2, lty = 2)  # Linha horizontal na median
 ![Gráfico 3](https://github.com/user-attachments/assets/5b517011-36ed-4e27-aebe-99428a7f3ac7)
 
 Em uma percepção inicial, o gráfico não está agradável aos olhos, mas corrigiremos isso em breve, isso ocorre devido a distorção dos dados, repare, a idade máxima é 140 e a mínima é negativa, condições que não condizem com a realidade. Podemos corrigir isso da seguinte forma:
+
+##Tratamento de dados - manipulando os valores "NA's"
+
+A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
+
+- Dados categóricos: alteramos os valores "NA's" para a moda 
+- Dados quantitativos: alteramos os valores "NA's" para a mediana
+
+Essas medidas garantem a remoção dos dados "NA's", entretanto, não gera alteração na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
