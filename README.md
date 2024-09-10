@@ -76,7 +76,9 @@ Removendo os dados:
 ```r
 dados[dados$Gênero == "M",] = "Masculino"
 dados[dados$Gênero == "F",] = "Feminino"
+dados$Gênero[is.na(dados$Gênero)] = "Masculino" #Alterando os valores NA's para a moda
 dados$Gênero = factor(dados$Gênero) # Removendo os níveis sem dados que sobraram após o processo
+
 ```
 
 Criando o gráfico
