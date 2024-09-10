@@ -1,4 +1,3 @@
-<p style="text-align: justify;">
 
 # Tratamento-de-dados-utilizando-R
 
@@ -205,5 +204,3 @@ z = dados[duplicated(dados$id),]
 ## Finalizado
 
 Com todas essas etapas, o tratamento de dados foi finalizado. É importante lembrar que isso foi uma demonstração básica e resumida de todo o processo, além de termos utilizado apenas a biblioteca padrão da linguagem. 
-
-</p>
