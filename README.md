@@ -133,7 +133,7 @@ Não há mais idades que ultrapassam com uma margem enorme a expectativa de vida
 dados[!complete.cases(dados$Idade),] = median(dados$Idade, na.rm = T)
 ```
 
-Conferindo os dados:
+Conferindo os dados: 
 
 ![image](https://github.com/user-attachments/assets/b86f0791-89f2-4f7b-b075-eb781ec5aadb)
 
@@ -148,3 +148,54 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 
 Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de d
 ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
+
+## Tratamento de dados - Coluna "Estados"
+
+Como dito anteriormente, precisamos remover todos os Estados que não pertecem a região sudeste, portanto:
+
+```r
+summary(dados$Estado)
+
+estados_permitidos = c("SP", "RS", "PR", "SC")
+
+dados$Estado[!dados$Estado %in% estados_permitidos] = "RS"
+
+summary(dados$Estado)
+
+dados$Estado = factor(dados$Estado)
+```
+
+Conferindo:
+
+```r
+summary(dados$Estado)
+```
+
+![image](https://github.com/user-attachments/assets/032f71f0-5e98-4f20-bbc1-c826b1706f45)
+
+
+## Tratamento de dados - Coluna "Salário"
+
+Os salários estão com valores "NA's"
+
+![Função Sumarry](https://github.com/user-attachments/assets/29dd7782-0117-4fce-989e-6e3cfea5630a)
+
+Corrigindo:
+
+```r
+dados$Salario[is.na(dados$Salario)] <- median(dados$Salario, na.rm = TRUE)
+```
+
+## Tratamento de dados - Coluna "ID's"
+
+Aplicando:
+
+```r
+z = dados[duplicated(dados$id),]
+dados = dados[!dados$id %in% c(z$id), ]
+
+z = dados[duplicated(dados$id),]
+```
+
+
+
