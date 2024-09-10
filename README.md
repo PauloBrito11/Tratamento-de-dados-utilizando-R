@@ -51,7 +51,7 @@ Logo de cara percebemos alguns problemas:
 
 Agora que notamos os erros presentes no conjunto de dados, devemos nos atentar a regra de negócio da empresa, vamos fazer a seguinte suposição: **a empresa trabalha apenas na região sudeste. Com isso em mente, surge um outro problema, se a empresa trabalha apenas na região sudeste, por quê existem dados de outras regiões? Também precisaremos corrigir os dados da coluna "Estados".** Levando em consideração todos esses fatores, podemos finalmente começar a executar mudanças no conjunto de dados, visando a mínima distorção nas informações, bem como a preservação das mesmas.
 
-### Iniciando o processo de tratamento de dados - Coluna "gêneros"
+## Iniciando o processo de tratamento de dados - Coluna "gêneros"
 
 Utilizando um gráfico, podemos visualizar o problema com mais facilidade
 
