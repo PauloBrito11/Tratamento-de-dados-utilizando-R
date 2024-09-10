@@ -4,8 +4,7 @@ O presente texto tem como objetivo demonstrar o processo de tratamento de dados 
 
 A primeira coisa que devemos notar é que dados devem seguir alguns parâmetros para que possam ser submetidos à análise, sendo eles:
 
-- Consistência
-- Duplicidades
+- Duplicidade
 - Consistência
 - Completude
 - Conformidade
@@ -29,7 +28,8 @@ head(dados)
 ```
 ![Função Head()](https://github.com/user-attachments/assets/00e16b5b-9bab-4c6e-8901-47f2e7eb295d)
 
-Utilizaremos a função Summary() para verificarmos o primeiro quartil, terceiro quartil, moda, mediana, média, valores máximos e mínimos (esses parâmetros variam conforme a categoria dos dados, sendo classificados em quantitativos e qualitativos)
+A função Summary() serve para verificarmos o primeiro quartil, terceiro quartil, moda, mediana, média, valores máximos e mínimos (esses parâmetros variam conforme a categoria dos dados, sendo classificados em quantitativos e qualitativos):
+
 ```r
 summary(dados)
 ```
