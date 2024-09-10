@@ -64,7 +64,7 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 
 Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
 
-## Iniciando o processo de tratamento de dados - Coluna "gêneros"
+## Iniciando o processo de tratamento de dados - Coluna "Gêneros"
 
 Utilizando um gráfico, podemos visualizar o problema com mais facilidade
 
@@ -154,7 +154,7 @@ Conferindo os dados:
 
 Não há mais valores que possam gerar algum tipo de distorção, portanto, o tratamento de dados da coluna "idade" está finalizado.
 
-## Tratamento de dados - Coluna "Estados"
+## Tratamento de dados - Coluna "Estado"
 
 Como dito anteriormente, precisamos remover todos os Estados que não pertecem a região sudeste, portanto:
 
