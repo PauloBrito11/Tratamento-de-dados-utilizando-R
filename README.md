@@ -107,7 +107,7 @@ Resultado:
 
 Agora que tornamos os dados da coluna "$Gênero" condensados em apenas duas possibilidades, não há mais problemas nessa coluna.
 
-## Continuidade do processo de tratamento de dados - Coluna "idade"
+## Continuidade do processo de tratamento de dados - Coluna "Idade"
 
 A coluna idade possui alguns problemas também, podemos visualizá-los claramente utilizando um gráfico:
 
