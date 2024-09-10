@@ -61,8 +61,7 @@ A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
 - Dados categóricos: alteramos os valores "NA's" para a moda 
 - Dados quantitativos: alteramos os valores "NA's" para a mediana
 
-Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de d
-ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
+Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de dados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
 
 ## Iniciando o processo de tratamento de dados - Coluna "gêneros"
 
