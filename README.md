@@ -12,6 +12,9 @@ A primeira coisa que devemos notar é que dados devem seguir alguns parâmetros 
 
 Todas esses possíveis problemas podem ser danosos caso a base de dados não sofra nenhum tratamento antes de ser exposta a um modelo ou a uma análise de dados, visto que todos esses fatores podem gerar distorções no resultado final.
 
+
+
+
 ## Explorando os dados e estabelecendo parâmetros
 
 Primeiramente, vamos explorar o conjunto de dados e verificar se os dados estão em conformidade com os princípios listados anteriormente e com a regra de negócio da empresa. 
@@ -50,6 +53,16 @@ Logo de cara percebemos alguns problemas:
 - Algumas colunas estão com valores "NA's"
 
 Agora que notamos os erros presentes no conjunto de dados, devemos nos atentar a regra de negócio da empresa, vamos fazer a seguinte suposição: **a empresa trabalha apenas na região sudeste. Com isso em mente, surge um outro problema, se a empresa trabalha apenas na região sudeste, por quê existem dados de outras regiões? Também precisaremos corrigir os dados da coluna "Estados".** Levando em consideração todos esses fatores, podemos finalmente começar a executar mudanças no conjunto de dados, visando a mínima distorção nas informações, bem como a preservação das mesmas.
+
+## Tratamento de dados - Como manipular valores "NA's"
+
+A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
+
+- Dados categóricos: alteramos os valores "NA's" para a moda 
+- Dados quantitativos: alteramos os valores "NA's" para a mediana
+
+Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de d
+ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
 
 ## Iniciando o processo de tratamento de dados - Coluna "gêneros"
 
@@ -139,17 +152,7 @@ Conferindo os dados:
 
 ![image](https://github.com/user-attachments/assets/b86f0791-89f2-4f7b-b075-eb781ec5aadb)
 
-Não há mais valores que possam gerer algum tipo de distorção, portanto, o tratamento de dados da coluna "idade" está finalizado.
-
-## Tratamento de dados - manipulando os valores "NA's"
-
-A forma de lidar com esses dados varia conforme a categoria dos dados, sendo:
-
-- Dados categóricos: alteramos os valores "NA's" para a moda 
-- Dados quantitativos: alteramos os valores "NA's" para a mediana
-
-Essas medidas garantem a remoção dos dados "NA's", entretanto, não geram alterações na soma total da quantidade de dados dentro do conjunto de d
-ados, permitindo a análise de dados sem grandes distorções nos resultados finais de modelos/constatações.
+Não há mais valores que possam gerar algum tipo de distorção, portanto, o tratamento de dados da coluna "idade" está finalizado.
 
 ## Tratamento de dados - Coluna "Estados"
 
@@ -174,7 +177,6 @@ summary(dados$Estado)
 ```
 
 ![image](https://github.com/user-attachments/assets/032f71f0-5e98-4f20-bbc1-c826b1706f45)
-
 
 ## Tratamento de dados - Coluna "Salário"
 
