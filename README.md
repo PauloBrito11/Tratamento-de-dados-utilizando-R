@@ -178,7 +178,7 @@ summary(dados$Estado)
 
 ## Tratamento de dados - Coluna "Salário"
 
-Os salários estão com valores "NA's"
+Os salários estão com valores "NA's", para resolver esse problema, vamos alterar esses dados para a mediana da coluna. 
 
 ![Função Sumarry](https://github.com/user-attachments/assets/29dd7782-0117-4fce-989e-6e3cfea5630a)
 
